@@ -1,7 +1,11 @@
 $(document).ready(function () {
 
 
-	for (i = 1; i < 101; i++) {
+	var userNumber = +prompt("Enter number from 1 to 100 to Fizz Bizz");
+
+	var evalNumber = function (userNumber) {
+
+	for (i = 1; i <= userNumber; i++) {
 		var FB = i;
 		var test3 = i % 3;
 		var test5 = i % 5;
@@ -22,6 +26,16 @@ $(document).ready(function () {
 
 		FB = "";
 
+		}
+
+	};
+
+	if (userNumber) {
+
+		evalNumber(userNumber);
+
+	} else {
+		alert("Please enter a number from 1 to 100");
 	}
 
 });
